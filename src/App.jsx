@@ -46,8 +46,9 @@ const App = () => {
 
   return (
     <div className=" bg-gray-100">
-      <div className='flex justify-between max-w-6xl mx-auto items-center min-h-[750px]'>
-        <Card className="w-full max-w-md p-6 shadow-lg rounded-2xl">
+      <div className='flex justify-center max-w-6xl mx-auto items-center h-screen px-2 md:px-0'>
+        {
+          !val &&  <Card className="w-full max-w-md p-6 shadow-lg rounded-2xl">
           <CardHeader>
             <CardTitle>
               <h1 className="text-center text-xl font-semibold">Create an account</h1>
@@ -118,6 +119,8 @@ const App = () => {
             </form>
           </CardContent>
         </Card>
+        }
+       
         {
           val && <Card className="w-full max-w-md py-10 px-12 shadow-lg rounded-2xl bg-blue-50 flex flex-col items-center justify-start">
             <div className='flex justify-between w-full'>
